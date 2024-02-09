@@ -5,13 +5,13 @@
 $enable-print-styles: false;
 
 // Colors
-$primary: #040F2B; //dark blue
-$secondary: #118C3C; //grass green
-$seconder: #7BB149; //lime green
+$primary: #00B5CC; //blue
+$dark: #000100;
+$secondary: $dark;
 
-$body-color: #606060;
-$soft: #f4f8f1;
-$headings-color: #434c6a;
+$body-color: #262626;
+$soft: #444444;
+$headings-color: $dark;
 $input-focus-border-color: $primary;
 
 $selection-color: #d9edf7;
@@ -19,7 +19,7 @@ $selection-color: #d9edf7;
 $success: #7BB149;
 
 // spaces
-$gutter-width: 20px;
+$gutter-width: 24px;
 
 // Breakpoints
 $grid-breakpoints: (
@@ -78,8 +78,8 @@ $spacers: map-merge((
 ), $spacers);
 
 // Fonts
-$font-family-sans-serif: 'Poppins', sans-serif;
-$font-family-serif: $font-family-sans-serif;
+$font-family-sans-serif: 'Open Sans', sans-serif;;
+$font-family-serif: 'Raleway', sans-serif;
 $headings-font-family: $font-family-serif;
 
 // Figure

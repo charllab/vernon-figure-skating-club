@@ -36,9 +36,7 @@ if (!function_exists('custom_after_setup_theme')) {
         add_theme_support( 'post-thumbnails' );
 
         register_nav_menus([
-            'primary' => 'Primary Menu',
-            'secondary' => 'Footer Menu',
-            'tertiary' => 'Legal Menu'
+            'primary' => 'Primary Menu'
         ]);
 
         // Style Gutenberg

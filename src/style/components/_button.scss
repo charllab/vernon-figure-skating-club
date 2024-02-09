@@ -4,15 +4,16 @@ button, .btn {
 }
 
 .btn {
-    font-size: 1rem;
+    font-size: 0.875rem;
     line-height: 1.5;
-    font-weight: 600;
+    font-weight: 700;
     margin-bottom: $spacer/5;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    height: 60px;
-    min-width: 188px;
+    height: 44px;
+    min-width: 144px;
+    color: white !important;
 }
 
 .btn.btn-collapse {
@@ -35,14 +36,28 @@ button, .btn {
     @include media-breakpoint-up(md) {
         background-position: 98% center;
     }
+
     &:active {
         border-color: #ebebeb;
     }
 }
 
-.btn-secondary {
-    color: white !important;
+
+.btn-primary {
+    &:hover, &:active {
+        background-color: darken($primary, 5%);
+    }
 }
+
+.btn-secondary {
+    background-color: #262626;
+    &:hover, &:active {
+        background-color: lighten(#262626, 20%);
+        border-color: lighten(#262626, 20%);
+    }
+}
+
+
 
 body .gform_wrapper .gform_footer input[type=submit] {
     @extend .btn;
@@ -67,12 +82,14 @@ body #gform_2 .gform_footer input[type=submit] {
     @include media-breakpoint-up(sm) {
         padding: 0 $spacer;
     }
+
     &:hover {
         color: white;
         border-color: white;
         background-color: $secondary;
     }
 }
+
 .btn.btn-outline-success,
 .btn.btn-outline-light {
     border-width: 2px; /* or any size you prefer */
