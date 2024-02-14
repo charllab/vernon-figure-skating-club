@@ -16,16 +16,27 @@
         max-width: 904px;
     }
 }
+
 footer {
-    background-color: #06102b;
-    .footer-logo {
-        img {
-            max-width: 240px;
-            height: auto;
-            @include media-breakpoint-up(lg) {
-                max-width: 318px;
-            }
+
+        @include media-breakpoint-up(md) {
+            .footer-max-md-width {
+                max-width: $spacer*10;
         }
+    }
+
+    .container {
+        border-top: 4px solid $primary;
+    }
+
+    .footer-bc-logo {
+        width: auto;
+        height: $spacer*4;
+    }
+
+    .footer-skatecanda-logo {
+        width: auto;
+        height: $spacer*4;
     }
 
     .footer-nav {
@@ -38,15 +49,18 @@ footer {
             display: flex;
             justify-content: flex-end;
         }
+
         .nav-link {
             font-size: .8rem;
             text-transform: uppercase;
             color: white;
             margin-bottom: $spacer/2;
             font-weight: 600;
+
             &.active {
                 color: #76a64e;
             }
+
             @include media-breakpoint-up(lg) {
                 margin-left: $spacer;
                 margin-bottom: 0;
@@ -64,6 +78,7 @@ footer {
 footer {
     #menu-footer-menu {
         margin-bottom: $spacer;
+
         .nav-link {
             color: white;
             font-size: 12px;
