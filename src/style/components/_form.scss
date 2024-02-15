@@ -17,7 +17,7 @@ body .gform_wrapper {
 }
 
 body .gform_wrapper .gform_body .gform_fields .gfield .gfield_label {
-    font-weight: 600 !important;
+    font-weight: 700 !important;
     color: $dark;
 }
 body .gform_wrapper .gform_body .gform_fields .gfield .gfield_label .gfield_required {color: red}
@@ -31,7 +31,7 @@ body .gform_wrapper .gform_body .gform_fields .gfield .ginput_complex .ginput_le
 body .gform_wrapper .gform_body .gform_fields .gfield .ginput_complex .ginput_right label {color: $dark}
 
 body .gform_wrapper .gform_required_legend {
-    font-weight: 600;
+    font-weight: 700;
     font-size: 90%;
 }
 body .gform_wrapper .gfield_description.validation_message.gfield_validation_message {
@@ -86,7 +86,7 @@ body .gform_wrapper select {
 .gform_wrapper.gravity-theme .gfield-choice-input+label {
     margin-bottom: 2px !important;
     padding-right: 2px;
-    font-weight: 600;
+    font-weight: 700;
     color: $dark;
 }
 
@@ -127,14 +127,15 @@ span#input_1_3_6_container {
 
 body .gform_wrapper .gform_body .gform_fields .gfield .gfield_label,
 body .gform_wrapper .gform_body .gform_fields .gfield .gfield_label .gfield_required {
-    display: none;
+    //display: none;
+    color: #555555;
 }
 
 body .gform_wrapper .gform_body .gform_fields .gfield textarea,
 body .gform_wrapper .gform_body .gform_fields .gfield input[type=text],
 body .gform_wrapper .gform_body .gform_fields .gfield input[type=email] {
-    border-radius: 5px;
-    border:1px solid #DDDDDD;
+    border-radius: 2px;
+    border:1px solid #dce3e4 !important;
 }
 
 body #gform_2 {
@@ -169,4 +170,8 @@ body #gform_2 .gform_footer {
     grid-column-start: 2;
     margin:0 !important;
     padding: 0 !important;
+}
+
+body .gform_wrapper .gform_body .gform-field-label--type-sub {
+    color: #787878;
 }

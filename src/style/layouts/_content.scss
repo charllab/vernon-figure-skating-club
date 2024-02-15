@@ -55,3 +55,11 @@ main {
         display: none !important;
     }
 }
+
+table.contact-details {
+    * {
+        background-color: transparent;
+        box-shadow: none;
+        border-bottom: none;
+    }
+}

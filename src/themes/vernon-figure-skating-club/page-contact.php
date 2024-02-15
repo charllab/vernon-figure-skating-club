@@ -11,7 +11,7 @@ get_header(); ?>
         <div class="py-3">
             <div class="container">
                 <div class="row justify-content-between">
-                    <div class="col-lg-6">
+                    <div class="col-lg-7">
 
                         <?php if (have_posts()) : ?>
 
@@ -30,32 +30,30 @@ get_header(); ?>
                     </div><!-- col -->
 
                     <div class="col-lg-5">
-                        <div class="pt-3 pb-2 px-2 bg-light">
-                            <h2>Contact Information</h2>
+                        <div class="pt-150 pb-1 px-1">
+                            <h3>Contact Information</h3>
                             <?php
                             $removethese = array("(", " ", ")", "-");
                             ?>
-                            <table>
+                            <table class="table contact-details">
                                 <tr>
                                     <td><strong>Phone: </strong></td>
                                     <td>
-                                        <a href="tel:+1<?php echo strip_tel(get_field('primary_number', 'option')); ?>"><?php echo get_field('primary_number', 'option'); ?></a>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="pr-1"><strong>Toll Free: </strong></td>
-                                    <td>
-                                        <a href="tel:+1<?php echo strip_tel(get_field('secondary_number', 'option')); ?>"><?php echo get_field('secondary_number', 'option'); ?></a>
+                                        <a href="tel:+1<?php echo strip_tel(get_field('phone_number', 'option')); ?>"><?php echo get_field('phone_number', 'option'); ?></a>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td><strong>E-mail: </strong></td>
                                     <td>
-                                        <a href="mailto:<?php echo get_field('primary_email', 'option'); ?>"><?php echo get_field('primary_email', 'option'); ?></a>
+                                        <a href="mailto:<?php echo get_field('email_address', 'option'); ?>"><?php echo get_field('email_address', 'option'); ?></a>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td><strong>Address: </strong></td>
+                                    <td><strong>Mailing Address: </strong></td>
+                                    <td><?php echo get_field('mailing_address', 'option'); ?></td>
+                                </tr>
+                                <tr>
+                                    <td><strong>Arena Address: </strong></td>
                                     <td><?php echo get_field('physical_address', 'option'); ?></td>
                                 </tr>
                             </table>

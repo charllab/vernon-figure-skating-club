@@ -12,7 +12,7 @@ button, .btn {
     align-items: center;
     justify-content: center;
     height: 44px;
-    min-width: 144px;
+    min-width: 132px;
     color: white !important;
 }
 
@@ -67,7 +67,7 @@ body .gform_wrapper .gform_footer input[type=submit] {
 
 body #gform_wrapper_1 .gform_footer input[type=submit] {
     @extend .btn;
-    @extend .btn-outline-light;
+    @extend .btn-primary;
 }
 
 body #gform_2 .gform_footer input[type=submit] {
