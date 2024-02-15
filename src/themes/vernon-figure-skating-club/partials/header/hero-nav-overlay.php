@@ -37,10 +37,10 @@
         </div><!-- -container -->
 
 
-        <div class="container">
+        <div class="container d-flex">
             <?php wp_nav_menu([
                 'theme_location' => 'primary',
-                'container_class' => 'collapse navbar-collapse d-lg-flex',
+                'container_class' => 'collapse navbar-collapse d-lg-flex order-1 order-lg-0',
                 'container_id' => 'mainMenu',
                 'menu_class' => 'navbar-nav me-lg-auto align-items-lg-center',
                 'fallback_cb' => '',
@@ -48,6 +48,8 @@
                 'walker' => new bootstrap_5_wp_nav_menu_walker(),
             ]); ?>
 
+            <?php $register = get_field('register_link', 'option'); ?>
+            <a href="<?php echo $register['url']; ?>" target="<?php echo $register['target']; ?>" class="btn ms-auto btn-primary order-0 order-lg-1"><?php echo $register['title']; ?></a>
         </div><!-- container-->
     </nav>
 </header>

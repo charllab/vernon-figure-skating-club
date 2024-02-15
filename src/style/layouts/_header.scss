@@ -1,5 +1,16 @@
 .hero-nav-overlay {
 
+    #main-menu {
+        @include media-breakpoint-up(lg) {
+            .menu-item:first-child {
+                padding-left: 0;
+                .nav-link {
+                    padding-left: 0;
+                }
+            }
+        }
+    }
+
     .navbar {
         background-color: transparent;
         padding: 0;
@@ -81,5 +92,19 @@
 a.social-link {
     &:hover, &:active {
         color: darken($primary,5%) !important;
+    }
+}
+.dropdown-menu {
+    border-radius: 2px;
+    padding-top: 0;
+    padding-bottom: 0;
+    border-color: #ced7d9;
+    overflow: hidden;
+    .nav-item {
+        padding: 0;
+        .dropdown-item {
+            padding-left: 8px;
+            padding-right: 8px;
+        }
     }
 }

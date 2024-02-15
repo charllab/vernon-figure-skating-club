@@ -1,47 +1,52 @@
 <?php get_header(); ?>
     <section>
-        <div class="container">
+        <div class="container py-2">
             <div class="row">
-                <div class="col-12">
-                    <h1>H1 The quick brown fox jumps over the lazy dog 123-456-7890<br>
-                        H1 The quick brown fox jumps over the lazy dog 123-456-7890</h1>
-                    <h2>H2 The quick brown fox jumps over the lazy dog 123-456-7890<br>
-                        H2 The quick brown fox jumps over the lazy dog 123-456-7890</h2>
-                    <h3>H3 The quick brown fox jumps over the lazy dog 123-456-7890 <br>
-                        H3 The quick brown fox jumps over the lazy dog 123-456-7890</h3>
-                    <h4>H4 The quick brown fox jumps over the lazy dog 123-456-7890 <br>
-                        H4 The quick brown fox jumps over the lazy dog 123-456-7890</h4>
-                    <h5>H5 The quick brown fox jumps over the lazy dog 123-456-7890 <br>
-                        H5 The quick brown fox jumps over the lazy dog 123-456-7890</h5>
-                    <h6>H6 The quick brown fox jumps over the lazy dog 123-456-7890 <br>
-                        H6 The quick brown fox jumps over the lazy dog 123-456-7890</h6>
-                    <p class="lead">lead Hamburgefonstiv</p>
-                    <p>The quick brown fox jumps over the lazy dog 123-456-789 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti distinctio
-                        explicabo illo inventore ipsam, numquam?</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum omnis quis similique! A aut
-                        ducimus enim maxime natus, numquam quibusdam? Ab accusantium at ea hic id, impedit ipsam
-                        itaque maxime modi nemo, nobis, non placeat praesentium quisquam reprehenderit sapiente
-                        similique!</p>
-                    <a href="#">Hamburgefonstiv</a>
-                    <div>
-                        <a href="#" class="btn btn-primary">Hamburgefonstiv</a>
-                    </div>
-                    <div>
-                        <a href="#" class="btn btn-secondary">Hamburgefonstiv</a>
-                    </div>
-                    <a href="#" class="btn btn-primary">Hamburgefonstiv</a>
-                    <a href="#" class="btn btn-secondary">Hamburgefonstiv</a>
-                    <ul>
-                        <li>Hamburgefonstiv</li>
-                        <li>Hamburgefonstiv</li>
-                        <li>Hamburgefonstiv</li>
-                    </ul>
-                    <ol>
-                        <li>Hamburgefonstiv</li>
-                        <li>Hamburgefonstiv</li>
-                        <li>Hamburgefonstiv</li>
-                    </ol>
-                </div><!-- col -->
+
+                    <?php
+                    // Arguments for the query
+                    $args = array(
+                        'post_type' => 'program', // Change to your custom post type name
+                        'posts_per_page' => -1, // -1 to fetch all posts
+                    );
+
+                    // The Query
+                    $the_query = new WP_Query($args);
+
+                    // The Loop
+                    if ($the_query->have_posts()) {
+
+                        while ($the_query->have_posts()) {
+                            $the_query->the_post();
+                            // Get the current post URL
+                            $post_url = get_permalink();
+
+                            echo '<div class="col-lg-6 col-xl-4">';
+                            echo '<div class="pe-md-2 pe-lg-4 pt-3 position-relative">';
+                            // Wrap the title in a link
+                            $siloute_icon = get_field('siloute_icon');
+                            if ($siloute_icon) {
+                                // Assuming 'siloute_icon' is an image URL, also make the image a clickable link
+                                echo '<div class="the--icon position-absolute">';
+                                echo '<img src="' . esc_url($siloute_icon['url']) . '" alt="' . get_the_title() . ' icon" class="object-fit-fill">';
+                                echo '</div>';
+                            }
+                            echo '<h2>' . get_the_title() . '</h2>';
+                            // Get the post excerpt
+                            echo '<p class="standard-height">' . get_the_excerpt() . '</p>';
+                            // Get the ACF field 'siloute_icon'
+                            echo '<p><a href="' . esc_url($post_url) . '" class="btn btn-primary">Learn More</a></p>';
+                            echo '</div>';
+                            echo '</div>';
+                        }
+                    } else {
+                        // No posts found
+                        echo '<p>No programs found.</p>';
+                    }
+
+                    // Restore original Post Data
+                    wp_reset_postdata();
+                    ?>
             </div><!-- row -->
         </div><!-- container -->
     </section>

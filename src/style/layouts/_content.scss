@@ -63,3 +63,70 @@ table.contact-details {
         border-bottom: none;
     }
 }
+.tribe-common-l-container.tribe-events-l-container {
+    @extend .container;
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+}
+
+.tribe-common--breakpoint-medium.tribe-events .tribe-events-l-container {
+    min-height: 500px;
+    padding: $spacer*2 0 $spacer*2;
+}
+.img--holder {
+    overflow: visible;
+    display: block;
+    @include media-breakpoint-up(lg) {
+        margin-top: $spacer*3;
+        min-height: 400px;
+        height: 20px;
+        .the--img {
+            position: absolute;
+        }
+    }
+    @include media-breakpoint-down(lg) {
+        .the--img {
+            max-width: 100%;
+            height: auto;
+        }
+    }
+}
+
+.wp-block-table table {
+    @extend .table;
+    @extend .table-hover;
+    @extend .table-striped;
+    @extend .table-info;
+    tr, td {
+        border-color: #ccc !important;
+    }
+    thead {
+        border-color: #ccc !important;
+        tr, th {
+            border-color: #ccc !important;
+        }
+        th {
+            background-color: transparent;
+        }
+    }
+}
+
+.standard-height {
+    min-height: $spacer*5;
+}
+.the--icon {
+    width: 160px;
+    height: 100px;
+    top: 0;
+    right: $spacer;
+    text-align: end;
+    @include media-breakpoint-up(xxl) {
+        right: $spacer*3;
+    }
+    img {
+        width: 100%;
+        height: 100%;
+        object-position: center;
+        mix-blend-mode: multiply;
+    }
+}

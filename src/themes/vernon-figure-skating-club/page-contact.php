@@ -7,29 +7,19 @@
 get_header(); ?>
 
     <main>
-
-        <div class="py-3">
             <div class="container">
                 <div class="row justify-content-between">
-                    <div class="col-lg-7">
-
+                    <div class="col-lg-8">
                         <?php if (have_posts()) : ?>
-
                             <?php /* Start the Loop */ ?>
-
                             <?php while (have_posts()) : the_post(); ?>
-
                                 <h2 class="text-capitalize"><?php the_title(); ?></h2>
-
                                 <?php the_content(); ?>
-
                             <?php endwhile; ?>
-
                         <?php endif; ?>
-
                     </div><!-- col -->
 
-                    <div class="col-lg-5">
+                    <div class="col-lg-4">
                         <div class="pt-150 pb-1 px-1">
                             <h3>Contact Information</h3>
                             <?php
@@ -57,8 +47,7 @@ get_header(); ?>
                                     <td><?php echo get_field('physical_address', 'option'); ?></td>
                                 </tr>
                             </table>
-                        </div><!-- bg-light -->
-
+                        </div>
                         <div class="px-0">
                             <?php
                             echo get_field('map_embed_code', 'option');
@@ -66,10 +55,7 @@ get_header(); ?>
                         </div><!-- px-0 -->
                     </div><!-- col -->
                 </div><!-- row -->
-
             </div><!-- container -->
-        </div>
-
     </main>
 
 <?php get_footer();
