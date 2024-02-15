@@ -10,7 +10,7 @@
                                  class="img-fluid footer-bc-logo">
                             <span class="sr-only"><?php bloginfo('name'); ?></span>
                         </a>
-                        <p class="small ms-md-1 muted px-1 pt-1 p-md-0 mb-md-0 footer-max-md-width">We acknowledge the financial assistance of the Province of British Columbia.</p>
+                        <p class="small ms-md-1 muted px-1 pt-1 p-md-0 mb-md-0 footer-max-md-width"><?php the_field('acknowledgement_text', 'option')?></p>
                     </div>
                 </div><!-- col -->
                 <div class="col-md-4 text-center text-md-end">
@@ -24,10 +24,10 @@
             </div><!-- row -->
             <div class="row">
                 <div class="col-md-6 text-center text-md-start muted small">
-                    <p class="mb-0">&copy; <?php echo Date('Y') . ' ' . get_bloginfo('name'); ?></p>
+                    <p class="mb-0 px-50">&copy; <?php echo Date('Y') . ' ' . get_bloginfo('name'); ?></p>
                 </div>
                 <div class="col-md-6 text-center text-md-end muted small">
-                    <p class="mb-0">Designed, Developed and Hosted by <a href="https://sproing.ca" target="_blank">Sproing&nbsp;Creative</a>
+                    <p class="mb-0 px-1">Designed, Developed and Hosted by <a href="https://sproing.ca" target="_blank">Sproing&nbsp;Creative</a>
                     </p>
                 </div><!-- col -->
             </div><!-- row -->
