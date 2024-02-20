@@ -115,11 +115,15 @@ table.contact-details {
     min-height: $spacer*5;
 }
 .the--icon {
-    width: 160px;
-    height: 100px;
+    width: 60px;
+    height: 76px;
     top: 0;
     right: $spacer;
     text-align: end;
+    @include media-breakpoint-up(md) {
+        width: 160px;
+        height: 100px;
+    }
     @include media-breakpoint-up(xxl) {
         right: $spacer*3;
     }
@@ -128,5 +132,17 @@ table.contact-details {
         height: 100%;
         object-position: center;
         mix-blend-mode: multiply;
+    }
+}
+.font-page {
+    .blue-highlight {
+        strong {
+            color: $primary !important;
+        }
+    }
+}
+.hero--img {
+    @include media-breakpoint-up(lg) {
+        max-width: 712px;
     }
 }
