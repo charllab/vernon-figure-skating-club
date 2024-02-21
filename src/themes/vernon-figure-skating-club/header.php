@@ -16,6 +16,7 @@
     <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?> style="background: linear-gradient(to bottom, rgba(222, 100, 97, 0), rgba(255, 255, 255, 1)),
+                url('<?php bloginfo('template_url'); ?>/images/soft-tile-2.jpg') repeat; background-attachment: fixed; background-size: 250px;">
 
     <?php get_template_part('partials/header/hero-nav-overlay'); ?>

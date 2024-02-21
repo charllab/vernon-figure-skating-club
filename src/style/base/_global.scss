@@ -14,10 +14,6 @@ body {
     background: white;
     overflow-x: hidden;
     min-width: 320px;
-    background:
-        linear-gradient(to bottom, rgba(222, 100, 97, 0), rgba(255, 255, 255, 1)),
-        url("../images/soft-tile.jpg") repeat;
-    background-attachment: fixed;
 }
 
 body.css-loaded {
