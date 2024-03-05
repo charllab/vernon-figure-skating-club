@@ -24,7 +24,8 @@
             </div><!-- row -->
             <div class="row">
                 <div class="col-md-6 text-center text-md-start muted small">
-                    <p class="mb-0 px-50">&copy; <?php echo Date('Y') . ' ' . get_bloginfo('name'); ?></p>
+                    <p class="mb-0 px-50">&copy; <?php echo Date('Y') . ' ' . get_bloginfo('name'); ?> | <a
+                            href="<?php echo esc_url(home_url('/terms-of-use-and-privacy-policy')); ?>">Terms & Privacy</a></p>
                 </div>
                 <div class="col-md-6 text-center text-md-end muted small">
                     <p class="mb-0 px-1">Designed, Developed and Hosted by <a href="https://sproing.ca" target="_blank">Sproing&nbsp;Creative</a>
