@@ -112,7 +112,9 @@ table.contact-details {
 }
 
 .standard-height {
-    min-height: $spacer*5;
+    @include media-breakpoint-up(md) {
+        min-height: $spacer*5;
+    }
 }
 .the--icon {
     width: 60px;

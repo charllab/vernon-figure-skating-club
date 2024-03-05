@@ -15,6 +15,13 @@
         background-color: transparent;
         padding: 0;
 
+        @include media-breakpoint-down(xs) {
+            .container {
+                padding-top: 8px;
+                padding-bottom: 0;
+            }
+        }
+
         @include media-breakpoint-up(lg) {
             display: block;
             .container {
@@ -84,8 +91,8 @@
     }
     @include media-breakpoint-down(xs) {
         i {
-            font-size: 20px;
-            margin-left: 0;
+            font-size: 24px;
+            margin-left: 2px;
         }
     }
 }
@@ -106,5 +113,11 @@ a.social-link {
             padding-left: 8px;
             padding-right: 8px;
         }
+    }
+}
+
+#header {
+    @include media-breakpoint-down(xs) {
+        padding-bottom: 8px;
     }
 }
