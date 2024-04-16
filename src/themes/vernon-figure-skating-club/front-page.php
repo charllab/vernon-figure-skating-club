@@ -1,31 +1,66 @@
 <?php get_header(); ?>
-<main class="font-page">
-    <section>
-        <div class="container py-md-2">
+    <main class="font-page">
+
+        <?php
+        $slider = get_field('hero_slider');
+        $hero_sliders = $slider['hero_slider'];
+        ?>
+
+        <?php if (!empty($slider)): ?>
+            <section class="pt-md-2">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="owl-carousel owl-theme">
+                                <?php foreach ($hero_sliders as $hs): ?>
+                                    <?php
+                                    $img = $hs['slider_image'];
+                                    $link = $hs['slider_link'];
+                                    ?>
+                                    <div class="item">
+                                        <?php if (!empty($link)) echo '<a href="' . $link['url'] . '">'; ?>
+                                        <img src="<?php echo $img['url']; ?>" alt="<?php echo $img['alt']; ?>"
+                                             class="img-fluid">
+                                        <?php if (!empty($link)) echo '</a>'; ?>
+                                    </div>
+                                <?php endforeach; ?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        <?php endif; ?>
+
+        <section>
+            <div class="container py-md-2">
+
+                <div class="d-none">
 
                 <?php $hero = get_field('hero_section');
                 $hero_content = $hero['hero_content'];
                 $hero_image = $hero['hero_image'];
                 ?>
 
-                <?php if(!empty($hero)):?>
+                <?php if (!empty($hero)): ?>
                     <div class="row mb-2">
                         <div class="col-12 text-center blue-highlight">
-                    <?php if(!empty($hero_content)):
-                        echo $hero_content;
-                    endif;
-                    if(!empty($hero_image)):?>
-                        <img
-                            src="<?php echo esc_url($hero_image['url']);?>"
-                            alt="<?php echo $hero_image['alt']?>"
-                            class="img-fluid hero--img mx-auto d-block px-1"
-                        >
-                        <?php endif;?>
+                            <?php if (!empty($hero_content)):
+                                echo $hero_content;
+                            endif;
+                            if (!empty($hero_image)):?>
+                                <img
+                                    src="<?php echo esc_url($hero_image['url']); ?>"
+                                    alt="<?php echo $hero_image['alt'] ?>"
+                                    class="img-fluid hero--img mx-auto d-block px-1"
+                                >
+                            <?php endif; ?>
                         </div><!-- col -->
                     </div><!-- row -->
-                <?php endif;?>
+                <?php endif; ?>
 
-            <div class="row">
+                </div><!-- d-none -->
+
+                <div class="row">
 
                     <?php
                     // Arguments for the query
@@ -78,8 +113,8 @@
                     // Restore original Post Data
                     wp_reset_postdata();
                     ?>
-            </div><!-- row -->
-        </div><!-- container -->
-    </section>
-</main>
+                </div><!-- row -->
+            </div><!-- container -->
+        </section>
+    </main>
 <?php get_footer();

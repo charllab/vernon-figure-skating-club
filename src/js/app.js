@@ -3,6 +3,18 @@ jQuery(function () {
     // Auto target _blank external links
     // targetBlankExternalLinks();
 
+    jQuery('.owl-carousel').owlCarousel({
+        loop:true,
+        items:1,
+        margin:10,
+        nav:true,
+        autoplay: 'true',
+        slideTransition: 'ease-out',
+        smartSpeed: 500,
+        autoplaySpeed: 500,
+        navText: []
+    })
+
     // Remove WP Block element iframe classes
     if (jQuery('.wp-block-embed-youtube').length) {
         jQuery('.wp-block-embed-youtube').removeClass().addClass('embed-responsive-item');
