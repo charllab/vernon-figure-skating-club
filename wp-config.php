@@ -54,8 +54,6 @@ define('DISALLOW_FILE_EDIT', true);
 
 define('WP_AUTO_UPDATE_CORE', true);
 
-define('DISABLE_WP_CRON', true);
-
 /**#@+
  * Authentication Unique Keys and Salts.
  *
