@@ -9,9 +9,9 @@ jQuery(function () {
         margin:10,
         nav:true,
         autoplay: 'true',
-        slideTransition: 'ease-out',
-        smartSpeed: 500,
-        autoplaySpeed: 500,
+        autoplayTimeout: 7000,
+        autoplaySpeed: 1000,
+        smartSpeed: 1000,
         navText: []
     })
 

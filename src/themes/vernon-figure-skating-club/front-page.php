@@ -7,7 +7,7 @@
         ?>
 
         <?php if (!empty($slider)): ?>
-            <section class="pt-md-2">
+            <section class="pt-1 pt-md-2">
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
@@ -32,7 +32,7 @@
         <?php endif; ?>
 
         <section>
-            <div class="container py-md-2">
+            <div class="container pt-1 py-md-2">
 
                 <div class="d-none">
 
