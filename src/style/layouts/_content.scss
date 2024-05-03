@@ -148,3 +148,8 @@ table.contact-details {
         max-width: 712px;
     }
 }
+
+.tribe-events-event-image img {
+    @extend .img-fluid;
+    @extend .d-block;
+}
